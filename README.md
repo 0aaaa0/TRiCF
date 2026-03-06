@@ -13,14 +13,19 @@ and Coordinate-Guided Cross-Modal Object Detection Network
 
 # Installation
 ## Clone the repository
-git clone https://github.com/0aaaa0/TRiCF.git
+git clone [https://github.com/0aaaa0/TRiCF.git](https://github.com/0aaaa0/TRiCF.git)
 
 cd TRiCF
 ## Create Environment
+```shell
 conda create -n TRiCF python=3.8
+```
+```shell
 conda activate TRiCF
+```
+```shell
 pip install -r requirements.txt
-
+```
 # Datasets 
 ## Datasets
 "FLIR-aligned"  "VEDAI"   "M3FD"
