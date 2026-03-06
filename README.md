@@ -19,11 +19,7 @@ cd TRiCF
 ## Create Environment
 ```shell
 conda create -n TRiCF python=3.8
-```
-```shell
 conda activate TRiCF
-```
-```shell
 pip install -r requirements.txt
 ```
 # Datasets 
@@ -33,6 +29,10 @@ Please download the datasets from the following links and place them in `data/mu
 
 # Manual Training & Evaluation
 ## Training
-python train.py --data data/multispectral/FLIR-align-3class.yaml  
+```shell
+python train.py --data data/multispectral/FLIR-align-3class.yaml 
+```
 ## Evaluation
+```shell
 python test.py --data data/multispectral/FLIR-align-3class.yaml --weights best.pt
+```
