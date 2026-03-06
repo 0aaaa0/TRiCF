@@ -21,12 +21,13 @@ conda create -n TRiCF python=3.8
 conda activate TRiCF
 pip install -r requirements.txt
 
-# Datasets & Weights
+# Datasets 
 ## Datasets
+"FLIR-aligned"  "VEDAI"   "M3FD"
 Please download the datasets from the following links and place them in `data/multispectral/`
 
 # Manual Training & Evaluation
 ## Training
-python train.py  
+python train.py --data data/multispectral/FLIR-align-3class.yaml  
 ## Evaluation
-python test.py
+python test.py --data data/multispectral/FLIR-align-3class.yaml --weights best.pt
