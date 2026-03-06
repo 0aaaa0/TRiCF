@@ -13,10 +13,20 @@ and Coordinate-Guided Cross-Modal Object Detection Network
 
 # Installation
 ## Clone the repository
-git clone https://github.com/chanchanchan97/TRiCF.git
+git clone https://github.com/0aaaa0/TRiCF.git
 
-# Training
-python train.py
+cd TRiCF
+## Create Environment
+conda create -n TRiCF python=3.8
+conda activate TRiCF
+pip install -r requirements.txt
 
-# Evaluation
+# Datasets & Weights
+## Datasets
+Please download the datasets from the following links and place them in `data/multispectral/`
+
+# Manual Training & Evaluation
+## Training
+python train.py  
+## Evaluation
 python test.py
