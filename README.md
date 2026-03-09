@@ -4,13 +4,14 @@ and Coordinate-Guided Cross-Modal Object Detection Network
 
 # Overview
 ## Framework
-<img width="1045" height="358" alt="绘图2" src="https://github.com/user-attachments/assets/4b853bb6-84dd-4344-8f59-bc37e3492b87" />
 <p align="center">
-  <img src="README.assets\detection.png" alt="overview" width="90%">
+  <img src="data/images/绘图2.png" alt="overview" width="90%">
 </p>
 
 ## Visualization
-<img width="457" height="134" alt="绘图7" src="https://github.com/user-attachments/assets/15f722b9-215d-42ce-9044-bca54d20fed7" />
+<p align="center">
+  <img src="data/images/绘图7.png" alt="overview" width="90%">
+</p>
 
 
 # Installation
