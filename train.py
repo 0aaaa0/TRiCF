@@ -62,7 +62,7 @@ def train_rgb_ir(hyp, opt, device, tb_writer=None):
     # Configure
     plots = not opt.evolve  # create plots
     cuda = device.type != 'cpu'
-    init_seeds(seed=1 + rank, deterministic=True)
+    init_seeds(seed=opt.seed + max(rank, 0), deterministic=True)
     with open(opt.data) as f:
         data_dict = yaml.safe_load(f)  # data dict
     is_coco = opt.data.endswith('coco.yaml')
