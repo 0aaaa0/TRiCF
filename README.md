@@ -32,11 +32,12 @@ The datasets used in our experiments are available
 through the following links:
 
 | Dataset | Baidu Netdisk |
-| :--- | :---: | :---: | :---: |
 | FLIR-aligned | [Download](通过网盘分享的文件：FLIR-align-3class.zip
 链接: https://pan.baidu.com/s/1eqcYlAguhTYl2bYQP_hxGg?pwd=x5we 提取码: x5we) | 
-| VEDAI | [Download](通过网盘分享的文件：FLIR-align-3class.zip等11个文件
-链接: https://pan.baidu.com/s/1NLmraKq67UJYCgbHn-9tMg?pwd=newq 提取码: newq) | 
+
+| VEDAI | [Download]通过网盘分享的文件：VEDAI-fold06.zip等10个文件
+链接: https://pan.baidu.com/s/1Usu8-A0uRc1iREU9kwW3oA?pwd=6bgt 提取码: 6bgt| 
+
 | M3FD | [Download](通过网盘分享的文件：M3FD.zip
 链接: https://pan.baidu.com/s/1ddR4h0uVX9WkugQiI8Mphg?pwd=j3g8 提取码: j3g8) | 
 
