@@ -1347,8 +1347,8 @@ class IRC5PhysicalEnhancement(nn.Module):
         # 自适应阈值
         threshold = local_mean + 0.5 * local_std
         # 生成先验图
-        prior = (intensity_map - threshold) / (torch.max(intensity_map) - threshold + 1e-6)
-        prior = torch.clamp(prior, min=0)  # 低于阈值的区域置0
+        max_response = ( intensity_map.flatten(2) .max(dim=2, keepdim=True)[0].unsqueeze(-1) )
+        prior = ((intensity_map - threshold) / (max_response - threshold + 1e-6) )
         return torch.sigmoid(prior)  # 归一化到[0,1]
 
     def gradient_prior(self, intensity_map):
