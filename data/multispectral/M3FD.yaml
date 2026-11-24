@@ -1,0 +1,24 @@
+# M3FD: six-class paired visible/infrared detection.
+# Run commands from the repository root with --data M3FD.yaml.
+# Place the ORIGINAL split folders under data/multispectral/M3FD/.
+# Paper split: 3,360 training pairs and 840 test pairs (80/20).
+# This configuration preserves existing folders; it does not re-split images.
+# Paths are read directly by this project's data loader. If the data are
+# elsewhere, update each path (changing only `path` is not sufficient).
+
+path: data/multispectral/M3FD
+
+train_rgb: data/multispectral/M3FD/visible/train
+train_ir: data/multispectral/M3FD/infrared/train
+
+# The current train.py and test.py read `val_*` for evaluation.
+# Here these keys point to the existing test partition; they do not create
+# an independent validation set. `test_*` records the same image paths.
+val_rgb: data/multispectral/M3FD/visible/test
+val_ir: data/multispectral/M3FD/infrared/test
+test_rgb: data/multispectral/M3FD/visible/test
+test_ir: data/multispectral/M3FD/infrared/test
+
+# Label ID order confirmed by the author: 0 through 5.
+nc: 6
+names: [people, car, bus, motorcycle, lamp, truck]

@@ -1,0 +1,32 @@
+# VEDAI: nine-class paired visible/infrared detection.
+# Run commands from the repository root with --data VEDAI.yaml.
+# Place the ORIGINAL split folders under data/multispectral/VEDAI/.
+# Paths below are read directly by this project's data loader; if the data
+# are elsewhere, update each path (changing only `path` is not sufficient).
+
+# Base directory of fold01 ... fold10; do not include fold01 in this value.
+path: data/multispectral/VEDAI
+folds: [fold01, fold02, fold03, fold04, fold05, fold06, fold07, fold08, fold09, fold10]
+
+# Default: fold01, used for the paper's VEDAI ablations and seed statistics.
+train_rgb: data/multispectral/VEDAI/fold01/visible/train
+train_ir: data/multispectral/VEDAI/fold01/infrared/train
+
+# `val_*` is the evaluation-loader key used for checkpoint selection.
+# It refers to the test partition in the reported protocol, not a separate
+# validation set. `test_*` documents the same final-reporting partition;
+# the current test.py reads `val_*`, including when --task test is used.
+val_rgb: data/multispectral/VEDAI/fold01/visible/test
+val_ir: data/multispectral/VEDAI/fold01/infrared/test
+test_rgb: data/multispectral/VEDAI/fold01/visible/test
+test_ir: data/multispectral/VEDAI/fold01/infrared/test
+
+# Class IDs follow the existing project VEDAI configuration.
+nc: 9
+names: [car, truck, pickup, tractor, camper, ship, van, plane, other]
+
+# Ten-fold results require a separately trained checkpoint for each fold.
+# Listing folds here does not train them or select a checkpoint per fold.
+# For another training fold, update all six train/val/test image paths.
+# This YAML points to existing partitions; it does not define image IDs,
+# generate folds, or verify the paper's 1,200-pair subset.
