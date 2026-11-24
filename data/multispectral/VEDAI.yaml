@@ -5,21 +5,20 @@
 # are elsewhere, update each path (changing only `path` is not sufficient).
 
 # Base directory of fold01 ... fold10; do not include fold01 in this value.
-path: data/multispectral/VEDAI
+path: E:/datasets/VEDAI
 folds: [fold01, fold02, fold03, fold04, fold05, fold06, fold07, fold08, fold09, fold10]
 
 # Default: fold01, used for the paper's VEDAI ablations and seed statistics.
-train_rgb: data/multispectral/VEDAI/fold01/visible/train
-train_ir: data/multispectral/VEDAI/fold01/infrared/train
+train_rgb: E:/datasets/VEDAI/fold01/visible/train
+train_ir: E:/datasets/VEDAI/fold01/infrared/train
 
 # `val_*` is the evaluation-loader key used for checkpoint selection.
 # It refers to the test partition in the reported protocol, not a separate
 # validation set. `test_*` documents the same final-reporting partition;
 # the current test.py reads `val_*`, including when --task test is used.
-val_rgb: data/multispectral/VEDAI/fold01/visible/test
-val_ir: data/multispectral/VEDAI/fold01/infrared/test
-test_rgb: data/multispectral/VEDAI/fold01/visible/test
-test_ir: data/multispectral/VEDAI/fold01/infrared/test
+val_rgb: E:/datasets/VEDAI/fold01/visible/test
+val_ir: E:/datasets/VEDAI/fold01/infrared/test
+
 
 # Class IDs follow the existing project VEDAI configuration.
 nc: 9
